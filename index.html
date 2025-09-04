@@ -2,13 +2,13 @@
 <html>
 <head>
   <!--
-    CIS213 Unit 1, Guided Practice 1
-    Author: <Broc Salvati>
-    Date: <09/04/2025>
+    CIS213 Unit 1, Guided Practice 2
+    Author: <Your Name Here>
+    Date: <Date Here>
   -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unit 1 Guided Practice 1</title>
+  <title>Unit 1 Guided Practice 2</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="modernizr.custom.05819.js"></script>
 </head>
@@ -16,93 +16,57 @@
 <body>
   <header>
     <h1>
-      Broc Salvati, Guided Practice 1
+      Your Name, Guided Practice 2
     </h1>
   </header>
 
   <article>
-    <h1>Internet Speed Considerations</h1>
-    <script>
-      // add HTML dynamically to the page
-      document.write("<ol>");
-      document.write("<li>How much do you play MMORPGs?</li>");
-      document.write("<li>How often do you stream videos?</li>");
-      document.write("<li>Do you use a VPN?</li>");
-      document.write("<li>How often do you download large files (&gt;50 MB)?</li>");
-      document.write("</ol>");
-    </script>
+    <h2>Shipping Address</h2>
+    <form>
+      <fieldset id="addroptions">
+        <legend><span>Choose an address</span></legend>
 
-    <h2>High-Speed Internet Plans</h2>
-    <script>
-      // initialize variables for service names and speeds
-      var service1Name = "Basic";
-      var service2Name = "Express";
-      var service3Name = "Extreme";
-      var service4Name = "Ultimate";
-      var service1Speed = 5;
-      var service2Speed = 25;
-      var service3Speed = 50;
-      var service4Speed = 150;
-    </script>
+        <label for="homeoption" id="homeaddr">
+          <span>Home</span><br />
+          1 Main St.<br />
+          Sicilia, MA 02103
+          <input type="radio" id="homeoption" name="shippingaddr"
+            onclick="document.getElementById('streetinput').value = '1 Main St.';
+                     document.getElementById('cityinput').value = 'Sicilia';
+                     document.getElementById('stateinput').value = 'MA';
+                     document.getElementById('zipinput').value = '02103';" />
+        </label>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Service</th>
-          <th>Download Speed (Mbps)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <script>
-              document.write(service1Name);
-            </script>
-          </td>
-          <td>
-            <script>
-              document.write(service1Speed);
-            </script>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <script>
-              document.write(service2Name);
-            </script>
-          </td>
-          <td>
-            <script>
-              document.write(service2Speed);
-            </script>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <script>
-              document.write(service3Name);
-            </script>
-          </td>
-          <td>
-            <script>
-              document.write(service3Speed);
-            </script>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <script>
-              document.write(service4Name);
-            </script>
-          </td>
-          <td>
-            <script>
-              document.write(service4Speed);
-            </script>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <label for="workoption" id="workaddr">
+          <span>Work</span><br />
+          15 Columbine Ln.<br />
+          Crab City, MA 02104
+          <input type="radio" id="workoption" name="shippingaddr"
+            onclick="document.getElementById('streetinput').value = '15 Columbine Ln.';
+                     document.getElementById('cityinput').value = 'Crab City';
+                     document.getElementById('stateinput').value = 'MA';
+                     document.getElementById('zipinput').value = '02104';" />
+        </label>
+      </fieldset>
+      <fieldset id="contactinfo">
+        <label for="streetinput">
+          Street Address
+          <input type="text" id="streetinput" />
+        </label>
+        <label for="cityinput">
+          City
+          <input type="text" id="cityinput" />
+        </label>
+        <label for="stateinput">
+          State
+          <input type="text" id="stateinput" />
+        </label>
+        <label for="zipinput">
+          Zip
+          <input type="text" id="zipinput" />
+        </label>
+      </fieldset>
+    </form>
   </article>
 </body>
 </html>
